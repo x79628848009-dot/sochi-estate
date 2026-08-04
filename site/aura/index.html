@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AURA — объект недвижимости, который работает сам</title>
+<meta name="description" content="Мы строим систему, в которой объект — больше не карточка с фотографиями. У него есть цель, память, голос и стратегия. Он знает о себе всю правду, вычисляет тех, кому нужен, и работает — круглосуточно, без посредников.">
+<link rel="canonical" href="https://aura.sochi.estate/">
+<meta name="theme-color" content="#0a0f1a">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AURA">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://aura.sochi.estate/">
+<meta property="og:title" content="AURA — объект недвижимости, который работает сам">
+<meta property="og:description" content="Мы строим систему, в которой объект — больше не карточка с фотографиями. У него есть цель, память, голос и стратегия. Он знает о себе всю правду, вычисляет тех, кому нужен, и работает — круглосуточно, без посредников.">
+<meta property="og:image" content="https://aura.sochi.estate/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AURA — радар системы на тёмном фоне">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AURA — объект недвижимости, который работает сам">
+<meta name="twitter:description" content="Мы строим систему, в которой объект — больше не карточка с фотографиями. У него есть цель, память, голос и стратегия. Он знает о себе всю правду, вычисляет тех, кому нужен, и работает — круглосуточно, без посредников.">
+<meta name="twitter:image" content="https://aura.sochi.estate/og.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="mask-icon" href="/favicon.svg" color="#E9A94D">
+<link rel="stylesheet" href="/styles.css">
+<noscript><style>
+  /* Без JS журнал не печатается — просто показываем строки целиком. */
+  .log__line::after { content: attr(data-text); }
+</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#manifest">К содержанию</a>
+
+<!-- ─────────────────────────── БЛОК 1 · HERO ─────────────────────────── -->
+<header class="hero">
+  <div class="wrap hero__grid">
+
+    <div class="hero__text">
+      <p class="eyebrow">AURA · первый полигон — Сочи</p>
+      <h1 class="hero__title">Объект недвижимости ожил</h1>
+      <p class="lede">Мы строим систему, в которой объект — больше не карточка с фотографиями. У него есть цель, память, голос и стратегия. Он знает о себе всю правду, вычисляет тех, кому нужен, и работает — круглосуточно, без посредников.</p>
+      <p class="cta-row"><a class="cta" href="#contact" data-cta>Увидеть систему первым <span class="cta__arrow" aria-hidden="true">→</span></a></p>
+    </div>
+
+    <div class="hero__radar">
+      <div class="radar" role="img" aria-label="Радар системы: расходящиеся кольца и вращающийся луч, изредка отмечающий цели">
+        <svg class="radar__svg" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="sweep" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#E9A94D" stop-opacity=".30"/>
+              <stop offset="55%"  stop-color="#E9A94D" stop-opacity=".10"/>
+              <stop offset="100%" stop-color="#E9A94D" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="edge" x1="200" y1="200" x2="200" y2="10" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#E9A94D" stop-opacity="0"/>
+              <stop offset="70%"  stop-color="#E9A94D" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#E9A94D" stop-opacity=".05"/>
+            </linearGradient>
+            <radialGradient id="core" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#E9A94D" stop-opacity=".16"/>
+              <stop offset="100%" stop-color="#E9A94D" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <circle cx="200" cy="200" r="196" fill="url(#core)"/>
+
+          <!-- статичная сетка -->
+          <g class="grid">
+            <circle cx="200" cy="200" r="192"/>
+            <circle cx="200" cy="200" r="146"/>
+            <circle cx="200" cy="200" r="100"/>
+            <circle cx="200" cy="200" r="54"/>
+            <line x1="200" y1="8"   x2="200" y2="392"/>
+            <line x1="8"   y1="200" x2="392" y2="200"/>
+          </g>
+
+          <!-- дышащие кольца -->
+          <g class="breath">
+            <circle cx="200" cy="200" r="146"/>
+            <circle cx="200" cy="200" r="100"/>
+          </g>
+
+          <!-- расходящиеся кольца -->
+          <g class="ripples">
+            <circle class="ripple ripple--1" cx="200" cy="200" r="190"/>
+            <circle class="ripple ripple--2" cx="200" cy="200" r="190"/>
+            <circle class="ripple ripple--3" cx="200" cy="200" r="190"/>
+          </g>
+
+          <!-- цели: вспыхивают, когда луч проходит через них -->
+          <g class="targets">
+            <g class="target target--1" transform="translate(254.5 122.2)">
+              <circle class="target__halo" r="4"/><circle class="target__dot" r="2.1"/>
+            </g>
+            <g class="target target--2" transform="translate(263.4 336)">
+              <circle class="target__halo" r="4"/><circle class="target__dot" r="2.1"/>
+            </g>
+            <g class="target target--3" transform="translate(117.3 230.1)">
+              <circle class="target__halo" r="4"/><circle class="target__dot" r="2.1"/>
+            </g>
+            <g class="target target--4" transform="translate(120 61.4)">
+              <circle class="target__halo" r="4"/><circle class="target__dot" r="2.1"/>
+            </g>
+          </g>
+
+          <!-- луч -->
+          <g class="beam">
+            <path class="beam__wedge" d="M200 200 L105 35.5 A190 190 0 0 1 200 10 Z" fill="url(#sweep)"/>
+            <line class="beam__edge" x1="200" y1="200" x2="200" y2="10" stroke="url(#edge)"/>
+          </g>
+
+          <circle class="radar__hub" cx="200" cy="200" r="2.6"/>
+        </svg>
+        <p class="radar__readout"><span class="radar__label">скан</span> · азимут <span id="azimuth">—</span></p>
+      </div>
+    </div>
+
+    <!-- журнал системы -->
+    <div class="hero__log">
+      <section class="terminal" aria-label="Журнал системы">
+        <div class="terminal__bar">
+          <span class="terminal__title">— журнал системы · сейчас</span>
+          <span class="terminal__clock" id="clock" aria-hidden="true">—</span>
+        </div>
+        <div class="terminal__body">
+          <ol class="log" id="log" aria-live="off">
+            <li class="log__line" data-text="изучаю выдачу площадок · новых лотов за ночь: …"></li>
+            <li class="log__line" data-text="портрет покупателя №3 уточнён · экспедиция назначена"></li>
+            <li class="log__line" data-text="проверка правового статуса завершена · записано в память"></li>
+          </ol>
+        </div>
+      </section>
+      <p class="terminal__note">визуализация работы системы</p>
+    </div>
+
+  </div>
+</header>
+
+<main id="manifest">
+
+  <!-- ───────────────────── БЛОК 2 · СТАРЫЙ МИР ───────────────────── -->
+  <section class="section">
+    <div class="wrap measure">
+      <h2 class="h2">Сто лет объект был товаром</h2>
+      <p class="body">Его фотографировали, вывешивали в витрину — и ждали. Всю работу делал посредник: он решал, что рассказать, о чём умолчать и кого убедить. Его цель — комиссия. Ваша правда — инструмент в его переговорах.</p>
+      <p class="body body--accent">Мы считаем, что эта роль устарела. Не человек в ней — сама роль.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────── БЛОК 3 · ИНВЕРСИЯ ───────────────────── -->
+  <section class="section section--ruled">
+    <div class="wrap">
+      <h2 class="h2 measure">Мы дали объекту то, чего у него никогда не было</h2>
+      <dl class="gifts">
+        <div class="gift">
+          <dt class="gift__term">Цель.</dt>
+          <dd class="gift__desc">Он знает, чего должен достичь — и в каком коридоре.</dd>
+        </div>
+        <div class="gift">
+          <dt class="gift__term">Память.</dt>
+          <dd class="gift__desc">Журнал каждого события его жизни: от правового статуса до каждого вопроса, который ему задали.</dd>
+        </div>
+        <div class="gift">
+          <dt class="gift__term">Голос.</dt>
+          <dd class="gift__desc">Он отвечает сам — за секунды, в любое время суток, без настроения и без сценария продавца.</dd>
+        </div>
+        <div class="gift">
+          <dt class="gift__term">Стратегию.</dt>
+          <dd class="gift__desc">Он изучает рынок вокруг себя, вычисляет своих людей и идёт к ним — а не ждёт в витрине.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ───────────────────── БЛОК 4 · МЕХАНИКА ───────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h2 measure">Что делает живой объект</h2>
+      <ol class="works">
+        <li class="work">
+          <span class="work__idx" aria-hidden="true">01</span>
+          <h3 class="work__title">Устанавливает правду о себе.</h3>
+          <p class="work__body">Проверка по государственным реестрам и базе локальных рисков — до молекулы. Каждый вывод со ссылкой на первоисточник: правду можно перепроверить, в неё не нужно верить.</p>
+        </li>
+        <li class="work">
+          <span class="work__idx" aria-hidden="true">02</span>
+          <h3 class="work__title">Вычисляет своих людей.</h3>
+          <p class="work__body">Из собственных свойств объект выводит портреты тех, кому он нужен, находит места их обитания — и доставляет себя туда. Направленный поиск вместо витрины и ожидания.</p>
+        </li>
+        <li class="work">
+          <span class="work__idx" aria-hidden="true">03</span>
+          <h3 class="work__title">Говорит и помнит.</h3>
+          <p class="work__body">Каждый диалог, каждая реакция рынка, каждое решение — в журнале. Система учится на всём, что с ним происходит.</p>
+        </li>
+        <li class="work">
+          <span class="work__idx" aria-hidden="true">04</span>
+          <h3 class="work__title">Отчитывается фактами.</h3>
+          <p class="work__body">Не «работаем над этим», а открытый журнал: что сделано, что ответил рынок, что дальше.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ───────────────────── БЛОК 5 · ИНТРИГА ───────────────────── -->
+  <section class="section section--reveal">
+    <div class="wrap measure">
+      <h2 class="h2">На чьей мы стороне?</h2>
+      <p class="questions">Продавца? Покупателя? Инвестора?</p>
+      <p class="answer">Мы на стороне объекта.</p>
+      <p class="body">Посредник служит тому, кто платит, — поэтому кому-то он не договаривает всегда. Наша система служит объекту, а объекту выгодна только правда о себе: ему нечего преувеличивать и незачем давить. Кто бы к нему ни пришёл — владелец, покупатель, капитал — он получает одно и то же: верифицированную истину и круглосуточную работу.</p>
+      <p class="body">Что с объектом делать — продавать, покупать, зарабатывать на нём — решаете вы. Это надстройки. Суть одна: между человеком и объектом больше нет никого.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────── БЛОК 6 · ПОЛИГОН ───────────────────── -->
+  <section class="section section--ruled">
+    <div class="wrap measure">
+      <h2 class="h2">Почему Сочи</h2>
+      <p class="body">Самый сложный рынок страны: большинство покупателей — за тысячи километров, сделки дистанционные, а юридическая история объектов — самая запутанная в России. Здесь посредник бессилен честно, а система — сильнее всего. Полигон выбран не потому, что здесь легко. Потому что здесь труднее всего.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────── БЛОК 7 · СТАТУС ───────────────────── -->
+  <section class="section">
+    <div class="wrap measure">
+      <h2 class="h2">Где мы сейчас</h2>
+      <p class="body">Система спроектирована и собирается. Первые объекты выходят на полигон — и всё, что с ними будет происходить, ляжет в открытый журнал: события, а не обещания. В Европе уже состоялась первая продажа дома без человека-посредника. Категория рождается прямо сейчас. В России она пуста.</p>
+    </div>
+  </section>
+
+  <!-- ───────────────────── БЛОК 8 · ФИНАЛ ───────────────────── -->
+  <section class="section section--final" id="contact">
+    <div class="wrap measure">
+      <h2 class="h1-alt">Система уже смотрит на рынок</h2>
+      <p class="lede">Мы открываем её немногим — тем, кому интересно оказаться рядом раньше остальных: с объектом, с капиталом или с экспертизой.</p>
+      <p class="cta-row"><a class="cta cta--lg" href="#contact" data-cta>Увидеть систему первым <span class="cta__arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__line">AURA · полигон: <a href="https://www.sochi.estate">sochi.estate</a> · <a href="#contact" data-cta>контакт</a></p>
+  </div>
+</footer>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
