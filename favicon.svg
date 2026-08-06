@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <defs>
-    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
-      <stop offset="0%" stop-color="#0b1524"/>
-      <stop offset="100%" stop-color="#04080f"/>
-    </radialGradient>
-    <radialGradient id="core" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffe6b0"/>
-      <stop offset="55%" stop-color="#E9A94D"/>
-      <stop offset="100%" stop-color="#E9A94D" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
-  <g fill="none" stroke="#E9A94D" stroke-width="1.6">
-    <circle cx="16" cy="16" r="11" stroke-opacity="0.28"/>
-    <circle cx="16" cy="16" r="7.5" stroke-opacity="0.55"/>
-    <circle cx="16" cy="16" r="4" stroke-opacity="0.9"/>
-  </g>
-  <circle cx="16" cy="16" r="5.5" fill="url(#core)"/>
-  <circle cx="16" cy="16" r="2.1" fill="#fff3dc"/>
+  <!-- Знак AURA: объект в разомкнутом кольце ауры. Один знак на весь домен —
+       этот файл и aura/favicon.svg совпадают до символа.
+
+       Подложки нет сознательно. На 16 пикселях подложка — единственное, что
+       достаточно велико, чтобы её разглядеть, поэтому любой знак на плитке
+       читается как квадрат, а не как знак. Без неё силуэт иконки — само
+       кольцо, и на светлой, белой и тёмной панели вкладок это кольцо.
+
+       Геометрия подчинена 16 пикселям, а не виду в крупном размере:
+       · кольцо одно — два сливаются в пятно;
+       · объект залит, а не контуром — контур на 16 px исчезает;
+       · зазор между объектом и кольцом шире самого кольца, иначе слипаются.
+
+       Правила и порядок проверки — в aura/README.md. -->
+
+  <circle cx="16" cy="16" r="13" fill="none" stroke="#E9A94D" stroke-width="3.4"
+          stroke-linecap="round" stroke-dasharray="68 13.7" transform="rotate(42 16 16)"/>
+
+  <rect x="12.2" y="12.2" width="7.6" height="7.6" rx="2" fill="#E9A94D"/>
 </svg>
