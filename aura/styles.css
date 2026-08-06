@@ -461,8 +461,10 @@ a { color: inherit; }
   max-width: 40rem;
 }
 
+/* Колонка под термин: самый длинный из них — «Право действовать.» — должен
+   умещаться в одну строку, иначе он ломает ритм однострочных соседей. */
 @media (min-width: 48rem) {
-  .gift { grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr); align-items: baseline; }
+  .gift { grid-template-columns: minmax(9rem, 15rem) minmax(0, 1fr); align-items: baseline; }
 }
 
 /* Блок 4 — механика */
