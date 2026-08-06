@@ -12,11 +12,9 @@
      Куда ведёт кнопка «Увидеть систему первым».
      Чтобы перевести на Telegram — замените строку ниже на:
         var CTA_LINK = 'https://t.me/ВАШ_НИК';
-     Сейчас — временный адрес почты, собранный из кусков, чтобы его не
-     выскребли спам-роботы.
      ═══════════════════════════════════════════════════════════════════ */
-  var CTA_LINK = 'mailto:' + ['x79628848009', 'gmail.com'].join('@') +
-                 '?subject=' + encodeURIComponent('AURA — увидеть систему первым');
+  var CTA_LINK = 'mailto:michael@rovensky.ru?subject=' +
+                 encodeURIComponent('AURA — увидеть систему первым');
 
   var reduced = window.matchMedia &&
                 window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -135,6 +133,44 @@
     var now = (window.performance && performance.now) ? performance.now() : Date.now();
     return (((now - started) / PERIOD) * 360) % 360;
   }
+
+  /* ──────────────────── РАДАР ОТЗЫВАЕТСЯ В ЖУРНАЛЕ ─────────────────
+     Когда луч проходит через цель, маркер одной из строк журнала на
+     пару секунд загорается: событие на радаре рождает запись. Моменты
+     вспышек те же, что в CSS у целей, а фаза берётся у самой анимации
+     луча — поэтому подсветка не разъезжается со вспышкой.            */
+
+  var PING_CYCLE = 36000;                          // цикл вспышек, мс
+  var PING_AT    = [1167, 11000, 17167, 32333];    // задержки целей 1, 4, 2, 3
+  var PING_HOLD  = 2000;                           // сколько держится подсветка
+
+  function schedulePings() {
+    if (reduced || !lines.length) return;
+
+    var phase = 0;
+    if (beam && beam.getAnimations) {
+      var a = beam.getAnimations()[0];
+      if (a && a.currentTime != null) {
+        var t = Number(a.currentTime);
+        if (!isNaN(t)) phase = t % PING_CYCLE;
+      }
+    }
+
+    PING_AT.forEach(function (at, i) {
+      var wait = (at - phase + PING_CYCLE) % PING_CYCLE;
+      var fire = function () {
+        var el = lines[i % lines.length];
+        el.classList.add('is-pinged');
+        setTimeout(function () { el.classList.remove('is-pinged'); }, PING_HOLD);
+      };
+      setTimeout(function () {
+        fire();
+        setInterval(fire, PING_CYCLE);
+      }, wait);
+    });
+  }
+
+  schedulePings();
 
   if (azimuth) {
     if (reduced) {
